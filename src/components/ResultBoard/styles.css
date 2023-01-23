@@ -1,0 +1,28 @@
+.result-container {
+  display: flex;
+  justify-content: center;
+  background-color: azure;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+.result-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.result-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  margin: 9px;
+  font-size: x-large;
+  font-weight: 700;
+  color: black;
+}

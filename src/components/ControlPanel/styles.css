@@ -1,0 +1,113 @@
+.control-container {
+  display: flex;
+  flex-direction: row;
+  margin: 5rem 2rem;
+}
+
+.control-text {
+  padding: 12px;
+  font-weight: 500;
+  line-height: 10px;
+}
+
+.control-input {
+  height: 50px;
+  max-width: 75px;
+  padding: 4px;
+  text-align: center;
+  font-size: x-large;
+  border-radius: 10px;
+  background-color: azure;
+  border: none;
+  outline: none;
+}
+
+.control-input:disabled {
+  color: #9b9b9b;
+}
+
+.control-input:invalid {
+  color: red;
+}
+
+.control-submit, .control-reset {
+  border: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin-left: 3rem;
+  padding: 20px 20px;
+  height: fit-content;
+  font-weight: 900;
+  background-color: #4bbaff;
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.control-reset {
+  background-color: #cf3d3d;
+}
+
+.control-reset:hover {
+  background-color: #db6969;
+}
+
+.control-submit:hover {
+  background-color: #6fc4f8;
+}
+
+.control-submit:active,
+.control-reset:active {
+  background-color: lightblue;
+}
+
+.control-submit:disabled {
+  background-color: #9b9b9b;
+  cursor: wait;
+}
+
+::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  opacity: 0.3;
+}
+
+::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  opacity: 0.3;
+}
+
+:-moz-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  opacity: 0.3;
+}
+
+:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  opacity: 0.3;
+}
+
+@media (max-width: 900px) {
+  .control-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+  }
+
+  .control-submit, .control-reset {
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  .control-text {
+    line-height: 0;
+  }
+}
