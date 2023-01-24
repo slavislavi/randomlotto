@@ -2,6 +2,7 @@ import React, { ChangeEvent, FC, FormEvent, useState } from "react";
 import { ControlPanel } from "./components/ControlPanel";
 import { ResultBoard } from "./components/ResultBoard";
 import { getRandomNumbers } from "./utils/getRandomNumbers";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import "./styles/index.css";
 
 export const App: FC = () => {
@@ -37,11 +38,11 @@ export const App: FC = () => {
     setNumbers([]);
     setShowBoard(false);
     setEnableControls(true);
-    console.log("Состояние сброшено!");
   };
 
   return (
     <div className="app-container">
+      <LanguageSwitcher />
       <ControlPanel
         amount={amount}
         total={total}

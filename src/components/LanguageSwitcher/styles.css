@@ -1,0 +1,27 @@
+.language-container {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+}
+
+.language-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-right: 1px solid black;
+  transition: all 0.2s;
+}
+
+.language-btn:last-child {
+  border-right: none;
+}
+
+.language-btn:hover {
+  color: white;
+}
+
+.active {
+  color: white;
+}

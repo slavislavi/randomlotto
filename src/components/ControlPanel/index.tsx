@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FC, FormEvent } from "react";
+import { useTranslation } from "react-i18next";
 import "./styles.css";
 
 interface ControlProps {
@@ -20,10 +21,12 @@ export const ControlPanel: FC<ControlProps> = ({
   onSubmitForm,
   onResetForm,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <form className="control-container" onSubmit={onSubmitForm}>
-        <p className="control-text">Выберите</p>
+        <p className="control-text">{t("choose")}</p>
         <input
           className="control-input"
           placeholder="1 - 99"
@@ -34,7 +37,7 @@ export const ControlPanel: FC<ControlProps> = ({
           maxLength={2}
           disabled={!enableControls}
         />
-        <p className="control-text">чисел из</p>
+        <p className="control-text">{t("numbersFrom")}</p>
         <input
           className="control-input"
           placeholder="1 - 999"
@@ -48,13 +51,13 @@ export const ControlPanel: FC<ControlProps> = ({
         <input
           className="control-submit"
           type="submit"
-          value="Подобрать"
+          value={t("pickUp")}
           disabled={!enableControls}
         />
         <input
           className="control-reset"
           type="button"
-          value="Сброс"
+          value={t("reset")}
           onClick={onResetForm}
         />
       </form>
